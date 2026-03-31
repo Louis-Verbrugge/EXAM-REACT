@@ -17,6 +17,8 @@ function App() {
         <Route path="/recipes" element={<AllRecipes />} />
         <Route path="/recipes/:id" element={<DetailRecipe />} />
 
+        <Route path="*" element={<AllRecipes />} />
+
       </Routes>
     </BrowserRouter>
   )
