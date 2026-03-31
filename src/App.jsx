@@ -1,6 +1,9 @@
 
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Favorite from './page/Favorite/Favorite';
+import AllRecipes from './page/Recipes/AllRecipes/AllRecipes';
+import DetailRecipe from './page/Recipes/DetailRecipe/DetailRecipe';
 import './App.css'
 
 function App() {
