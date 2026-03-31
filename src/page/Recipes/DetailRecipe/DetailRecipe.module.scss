@@ -1,31 +1,26 @@
-h1 {
-    text-align: center;
-    padding: 50px;
-    font-weight: bold;
-    font-size: 50px;
-}
+.pageDetailRecipe {
 
-h2 {
-    margin-bottom: 25px;
-}
+    padding-bottom: 50px;
 
-img {
-    padding: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    img {
+        padding: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.ingre_recette {
-    text-align: center;
-    margin-bottom: 50px;
-}
+    .ingre_recette {
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-.prepa_recette {
-    text-align: center;
-    margin-bottom: 50px;
-}
+    .prepa_recette {
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-.infos_recette {
-    text-align: center;
+    .infos_recette {
+        text-align: center;
+    }
+
 }

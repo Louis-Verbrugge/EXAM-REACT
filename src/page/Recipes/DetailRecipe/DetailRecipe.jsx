@@ -33,7 +33,7 @@ const DetailRecipe = ({ }) => {
 
 
     return (
-        <div>
+        <div className={styles.pageDetailRecipe}>
             <h1>{recipe.name}</h1>
             <img src={recipe.image}></img>
 
@@ -60,16 +60,23 @@ const DetailRecipe = ({ }) => {
 
 
             <div className={styles.infos_recette}>
-                <h2>Infos</h2>
-                <p>preparation time :{recipe.prepTimeMinutes}</p>
-                <p>cooking time :{recipe.cookTimeMinutes}</p>
-                <p>number of servings :{recipe.servings}</p>
-                <p>difficulty :{recipe.difficulty}</p>
-                <p>calories :{recipe.caloriesPerServing}</p>
-                <p>tags :{recipe.tags}</p>
-                <p>rating :{recipe.rating}</p>
-                <p>review count :{recipe.reviewCount}</p>
-                <p>type of meal :{recipe.mealType}</p>
+                <h2>Infos :</h2>
+                <p>preparation time : {recipe.prepTimeMinutes} min</p>
+                <p>cooking time : {recipe.cookTimeMinutes} min</p>
+                <p>number of servings : {recipe.servings}</p>
+                <p>difficulty : {recipe.difficulty}</p>
+                <p>calories : {recipe.caloriesPerServing}</p>
+                <p>tags :</p>
+                {
+                    recipe.tags && recipe.tags.map((item, index) => {
+                        return (
+                            <p>{item}</p>
+                        );
+                    })
+                }
+                <p>rating : {recipe.rating}</p>
+                <p>review count : {recipe.reviewCount}</p>
+                <p>type of meal : {recipe.mealType}</p>
             </div>
 
 
