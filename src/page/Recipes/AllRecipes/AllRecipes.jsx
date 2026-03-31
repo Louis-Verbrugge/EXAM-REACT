@@ -57,15 +57,9 @@ const AllRecipes = ({}) => {
         fetchRecipes();
     }, [filteredRecipes]);
 
-    useEffect(() => {
-        console.log("-------------------- filteredRecipes --------------------");
-        console.log(filteredRecipes);
-    }, [filteredRecipes])
-
     return (
         <div>
             <SearchEngine allCategories={allCategories} allLevel={allLevel} allTime={allTime} filteredRecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} />
-
             {
                 loading ? (
                     <Loading />

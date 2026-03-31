@@ -34,7 +34,6 @@ const SearchEngine = ( { allCategories, allLevel, allTime, filteredRecipes, setF
                         ) : null
                     }
                 </select>
-
                 <select name="Level" id="searchBy" value={filteredRecipes.selectedLevel} onChange={(e) => {
                     setFilteredRecipes((preview) => {
                         return {... preview, selectedLevel: e.target.value}
