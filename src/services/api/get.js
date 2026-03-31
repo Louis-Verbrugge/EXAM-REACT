@@ -1,7 +1,6 @@
 import axios from "axios"
 
 export const getData = async (path, params = {}, config = {}) => {
-    const token = localStorage.getItem("user") ?? "";
 
     try {
         const response = await axios.get('https://dummyjson.com/' + path, {

@@ -5,13 +5,14 @@ import Favorite from './page/Favorite/Favorite';
 import AllRecipes from './page/Recipes/AllRecipes/AllRecipes';
 import DetailRecipe from './page/Recipes/DetailRecipe/DetailRecipe';
 import './App.css'
+import Navbar from './components/NavBar/NavBar';
 
 function App() {
 
   return (
     <BrowserRouter>
+    <Navbar />
       <Routes>
-        <Route path="/" element={<div>Hello</div>} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/recipes" element={<AllRecipes />} />
         <Route path="/recipes/:id" element={<DetailRecipe />} />
