@@ -1,16 +1,16 @@
 
 import { useState } from 'react'
-import {BrowerRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
   return (
-    <BrowerRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>Hello</div>} />
       </Routes>
-    </BrowerRouter>
+    </BrowserRouter>
   )
 }
 
