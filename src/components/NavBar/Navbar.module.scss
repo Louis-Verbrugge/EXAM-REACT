@@ -1,0 +1,22 @@
+
+.navbar{
+    position: sticky;
+    top:0px;
+    left:0px;
+    width:100%;
+    display: flex;
+    background-color: #404040;
+
+    a {
+        padding: 15px;
+        color: white;
+
+        &:hover{
+            background-color: #505050;
+        }
+
+        &:active{
+            background-color: #202020;
+        }
+    }
+}
