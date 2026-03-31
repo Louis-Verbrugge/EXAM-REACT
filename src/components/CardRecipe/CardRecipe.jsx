@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './CardRecipe.module.scss';
 import { useNavigate } from 'react-router-dom';
 
-const CardRecipe = ({recipe}) => {
+const CardRecipe = ({recipe, isFavorite, onToggleFav}) => {
+    const navigate = useNavigate();
     return (
         <div className={styles.card} onClick={() => navigate(`/recipes/${recipe.id}`)}>
             <h2>{recipe.name}</h2>
