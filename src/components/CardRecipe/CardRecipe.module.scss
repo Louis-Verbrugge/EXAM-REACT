@@ -30,4 +30,11 @@
         color: #666;
         text-align: center;
     }
+
+    .blockButton{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 5px;
+    }
 }
