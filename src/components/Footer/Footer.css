@@ -1,0 +1,117 @@
+:root {
+    --bg-dark: #0f0c29;
+    --bg-medium: #302b63;
+    --bg-light: #24243e;
+
+    --primary-purple: #573b8a;
+    --primary-hover: #6d44b8;
+
+    --white: #ffffff;
+    --gray-light: #eeeeee;
+    --gray-input: #e0dede;
+    --shadow-dark: #000000;
+
+    --text-first: #ffffff;
+    --text-second: #b0b0b0;
+
+    --text-hover: #573b8a;
+    --text-first-bright: #ffffff;
+    --text-second-bright: rgba(255, 255, 255, 0.9);
+
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-divider svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+    fill: var(--bg-medium);
+}
+
+.footer-wave {
+    background: linear-gradient(to bottom, var(--bg-medium), var(--bg-light));
+    color: var(--text-first);
+    padding: 2rem 0 3rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: -1px;
+
+}
+
+.footer-wave__main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.footer-wave__heading {
+    color: var(--text-first);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.footer-wave__links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-wave__links li:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.footer-wave__links a {
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    transform-origin: center;
+    will-change: transform, color;
+}
+
+.footer-wave__links a:hover {
+    color: var(--footer-link-hover);
+    transform: scale(1.1);
+}
+
+.footer-wave__bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--text-second);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-wave__copyright {
+    font-size: 0.875em;
+}
+
+
+
+
+@media (min-width: 600px) {
+    .footer-wave__main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-wave__main-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+
+    .footer-wave__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

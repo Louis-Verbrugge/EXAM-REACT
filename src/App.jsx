@@ -6,12 +6,13 @@ import AllRecipes from './page/Recipes/AllRecipes/AllRecipes';
 import DetailRecipe from './page/Recipes/DetailRecipe/DetailRecipe';
 import './App.css'
 import Navbar from './components/NavBar/NavBar';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
 
   return (
     <BrowserRouter>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/recipes" element={<AllRecipes />} />
@@ -20,6 +21,8 @@ function App() {
         <Route path="*" element={<AllRecipes />} />
 
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -12,7 +12,8 @@ const CardRecipe = ({recipe, isFavorite, onToggleFav}) => {
 
             <div className={styles.blockButton}>
                 <button onClick={() => navigate(`/recipes/${recipe.id}`)}>
-                    View Recipe
+                    <i class="fa-solid fa-eye"></i>
+                     View Recipe
                 </button>
                 <button onClick={() => onToggleFav(recipe.id)}>
                     {isFavorite ? '❤️' : '🤍'}
