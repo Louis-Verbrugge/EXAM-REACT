@@ -34,21 +34,44 @@ const DetailRecipe = ({ }) => {
 
     return (
         <div>
-            <h1>Product id : {id}</h1>
-            <h2>path : {JSON.stringify(recipe)}</h2>
-            <p>name {recipe.name}</p>
-            <p>ingredients {recipe.ingredients}</p>
-            <p>instructions {recipe.instructions}</p>
-            <p>preparation time {recipe.prepTimeMinutes}</p>
-            <p>cooking time {recipe.cookTimeMinutes}</p>
-            <p>number of servings {recipe.servings}</p>
-            <p>difficulty {recipe.difficulty}</p>
-            <p>calories {recipe.caloriesPerServing}</p>
-            <p>tags {recipe.tags}</p>
-            <p>image {recipe.image}</p>
-            <p>rating {recipe.rating}</p>
-            <p>review count {recipe.reviewCount}</p>
-            <p>type of meal {recipe.mealType}</p>
+            <h1>{recipe.name}</h1>
+            <img src={recipe.image}></img>
+
+            <div className={styles.ingre_recette}>
+                <h2>Ingredients :</h2>
+                {
+                    recipe.ingredients && recipe.ingredients.map((item, index) => {
+                        return (
+                            <p>{item}</p>
+                        );
+                    })
+                }
+            </div>
+            <div className={styles.prepa_recette}>
+                <h2>Preparation :</h2>
+                {
+                    recipe.instructions && recipe.instructions.map((item, index) => {
+                        return (
+                            <p>{item}</p>
+                        );
+                    })
+                }
+            </div>
+
+
+            <div className={styles.infos_recette}>
+                <h2>Infos</h2>
+                <p>preparation time :{recipe.prepTimeMinutes}</p>
+                <p>cooking time :{recipe.cookTimeMinutes}</p>
+                <p>number of servings :{recipe.servings}</p>
+                <p>difficulty :{recipe.difficulty}</p>
+                <p>calories :{recipe.caloriesPerServing}</p>
+                <p>tags :{recipe.tags}</p>
+                <p>rating :{recipe.rating}</p>
+                <p>review count :{recipe.reviewCount}</p>
+                <p>type of meal :{recipe.mealType}</p>
+            </div>
+
 
         </div>
     );
